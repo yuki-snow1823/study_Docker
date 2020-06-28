@@ -1,0 +1,11 @@
+version: "3.7" # dcoker-compose.yml􏰀バージョンを指定
+services: # サービス内にコンテナ別􏰀項目を記載していく
+  app:
+    build: .
+    container_name: handson_rails 
+    ports:
+      - 3000:3000 
+    volumes:
+      - ./rails:/opt/rails
+    tty: true
+    stdin_open: true
